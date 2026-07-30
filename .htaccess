@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Rewrite all traffic into the public/ subdirectory safely
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

@@ -1,6 +1,20 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head, useForm, router } from '@inertiajs/react';
 import { useState, useEffect } from 'react';
+import { useWriteContract, useWaitForTransactionReceipt } from 'wagmi';
+import { parseEther } from 'viem';
+
+// Your Staking Smart Contract configuration
+const STAKING_CONTRACT_ADDRESS = "0x7e274ed190db175b6001474ee27c88b3b955fcd0";
+const STAKING_ABI = [
+    {
+        "inputs": [{"internalType": "uint256", "name": "amount", "type": "uint256"}],
+        "name": "stake",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    }
+];
 
 export default function Index({ pools, wallets, stakes }) {
     const [successMessage, setSuccessMessage] = useState('');
@@ -13,6 +27,15 @@ export default function Index({ pools, wallets, stakes }) {
     const { data, setData, post, processing, errors, reset, clearErrors } = useForm({
         staking_pool_id: pools[0]?.id || '',
         amount: '',
+        tx_hash: '', // Handled dynamically on blockchain confirmation
+    });
+
+    // Wagmi hooks to execute on-chain contract transactions
+    const { writeContract, data: hash, isPending: isWalletPending } = useWriteContract();
+
+    // Monitor and wait for the transaction block confirmation on-chain
+    const { isLoading: isBlockchainConfirming, isSuccess: isBlockchainConfirmed } = useWaitForTransactionReceipt({
+        hash,
     });
 
     useEffect(() => {
@@ -20,12 +43,31 @@ export default function Index({ pools, wallets, stakes }) {
             setData(prev => ({
                 ...prev,
                 staking_pool_id: activePool.id,
-                amount: ''
+                amount: '',
+                tx_hash: ''
             }));
             clearErrors();
         }
     }, [activePool]);
 
+    // Automatically submit to Laravel once confirmed on-chain
+    useEffect(() => {
+        if (isBlockchainConfirmed && hash) {
+            router.post(route('staking.store'), {
+                staking_pool_id: activePool.id,
+                amount: data.amount,
+                tx_hash: hash
+            }, {
+                onSuccess: () => {
+                    reset('amount');
+                    setSuccessMessage(`Successfully staked into ${activePool.name} on-chain!`);
+                    setTimeout(() => setSuccessMessage(''), 5000);
+                }
+            });
+        }
+    }, [isBlockchainConfirmed, hash]);
+
+    // Recalculate yield inside calculator
     useEffect(() => {
         if (calcPool && calcAmount > 0) {
             const amount = parseFloat(calcAmount);
@@ -41,15 +83,22 @@ export default function Index({ pools, wallets, stakes }) {
         }
     }, [calcAmount, calcPool]);
 
-    const handleStake = (e) => {
+    const handleOnChainStaking = (e) => {
         e.preventDefault();
-        post(route('staking.store'), {
-            onSuccess: () => {
-                reset('amount');
-                setSuccessMessage(`Successfully staked into ${activePool.name}.`);
-                setTimeout(() => setSuccessMessage(''), 5000);
-            }
-        });
+        if (!data.amount || data.amount <= 0) return;
+
+        try {
+            // Trigger MetaMask/WalletConnect write transaction
+            writeContract({
+                address: STAKING_CONTRACT_ADDRESS,
+                abi: STAKING_ABI,
+                functionName: 'stake',
+                args: [parseEther(data.amount.toString())],
+                value: parseEther(data.amount.toString()), // If sending native token
+            });
+        } catch (err) {
+            console.error("Contract Call Rejected:", err);
+        }
     };
 
     const handleClaim = (stakeId) => {
@@ -188,7 +237,7 @@ export default function Index({ pools, wallets, stakes }) {
                             <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 border-b pb-2 border-gray-200 dark:border-gray-700 mb-6">
                                 Stake into: <span className="text-indigo-600 dark:text-indigo-400">{activePool.name}</span>
                             </h3>
-                            <form onSubmit={handleStake} className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+                            <form onSubmit={handleOnChainStaking} className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
                                 <div>
                                     <label className="block text-xs uppercase font-semibold text-gray-400 mb-1">Available Balance</label>
                                     <div className="w-full bg-gray-100 dark:bg-gray-900 border border-transparent rounded-lg py-2 px-3 text-sm font-bold text-gray-900 dark:text-gray-100">
@@ -208,6 +257,7 @@ export default function Index({ pools, wallets, stakes }) {
                                         value={data.amount}
                                         onChange={e => setData('amount', e.target.value)}
                                         className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg py-2 px-3 text-sm focus:outline-none"
+                                        disabled={isWalletPending || isBlockchainConfirming || processing}
                                     />
                                     {errors.amount && <span className="text-xs text-red-500 mt-1 block">{errors.amount}</span>}
                                 </div>
@@ -215,10 +265,10 @@ export default function Index({ pools, wallets, stakes }) {
                                 <div>
                                     <button
                                         type="submit"
-                                        disabled={processing}
-                                        className="w-full py-2.5 px-4 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white font-semibold rounded-lg text-sm transition"
+                                        disabled={isWalletPending || isBlockchainConfirming || processing}
+                                        className="w-full py-2.5 px-4 bg-emerald-600 hover:bg-emerald-700 disabled:bg-emerald-400 text-white font-semibold rounded-lg text-sm transition"
                                     >
-                                        {processing ? 'Processing Lockup...' : 'Lock Funds & Start Staking'}
+                                        {isWalletPending ? 'Confirm in Wallet...' : isBlockchainConfirming ? 'Confirming on-chain...' : processing ? 'Securing Ledger...' : 'Lock Funds & Start Staking'}
                                     </button>
                                 </div>
                             </form>
