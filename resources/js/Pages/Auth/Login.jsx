@@ -4,7 +4,8 @@ import InputLabel from '@/Components/InputLabel';
 import TextInput from '@/Components/TextInput';
 import GuestLayout from '@/Layouts/GuestLayout';
 import { Head, Link, useForm } from '@inertiajs/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useConnect, useSignMessage, useDisconnect, useAccount } from 'wagmi';
 import axios from 'axios';
 
 export default function Login({ status, canResetPassword }) {
@@ -17,6 +18,12 @@ export default function Login({ status, canResetPassword }) {
     const [web3Loading, setWeb3Loading] = useState(false);
     const [web3Error, setWeb3Error] = useState('');
 
+    // Wagmi hooks to connect, sign, and disconnect wallets natively on mobile and desktop
+    const { connectAsync, connectors } = useConnect();
+    const { signMessageAsync } = useSignMessage();
+    const { disconnectAsync } = useDisconnect();
+    const { isConnected } = useAccount();
+
     const submit = (e) => {
         e.preventDefault();
         post(route('login'), {
@@ -28,28 +35,31 @@ export default function Login({ status, canResetPassword }) {
         setWeb3Error('');
         setWeb3Loading(true);
 
-        if (!window.ethereum) {
-            setWeb3Error('No Web3 wallet detected. Please install MetaMask.');
-            setWeb3Loading(false);
-            return;
-        }
-
         try {
-            const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-            const address = accounts[0];
+            // 1. Force disconnect previous cached sessions to prevent stuck states
+            if (isConnected) {
+                await disconnectAsync();
+            }
 
+            // 2. Select the WalletConnect connector (usually index 1 in our config)
+            // On mobile, this instantly triggers the deep-link selector modal for MetaMask/Trust Wallet
+            const walletConnectConnector = connectors.find(c => c.id === 'walletConnect') || connectors[0];
+            
+            const connection = await connectAsync({ 
+                connector: walletConnectConnector 
+            });
+            
+            const address = connection.accounts[0];
+
+            // 3. Request cryptographic login nonce from the Laravel backend
             const nonceResponse = await axios.get(route('web3.nonce'));
             const { message } = nonceResponse.data;
 
-            const hexMessage = '0x' + Array.from(new TextEncoder().encode(message))
-                .map(b => b.toString(16).padStart(2, '0'))
-                .join('');
+            // 4. Request user to sign the message
+            // On mobile, this deep-links back into MetaMask/Trust Wallet to request the signature
+            const signature = await signMessageAsync({ message });
 
-            const signature = await window.ethereum.request({
-                method: 'personal_sign',
-                params: [hexMessage, address],
-            });
-
+            // 5. Submit signature to backend for verification
             const verifyResponse = await axios.post(route('web3.verify'), {
                 address: address,
                 signature: signature
@@ -64,8 +74,11 @@ export default function Login({ status, canResetPassword }) {
 
         } catch (err) {
             console.error(err);
-            setWeb3Error(err.response?.data?.error || err.message || 'Authentication failed.');
+            setWeb3Error(err.response?.data?.error || err.message || 'Authentication canceled or failed.');
             setWeb3Loading(false);
+            
+            // Clean up connection on failure
+            try { await disconnectAsync(); } catch (e) {}
         }
     };
 
@@ -84,7 +97,7 @@ export default function Login({ status, canResetPassword }) {
                     className="w-full flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 disabled:bg-emerald-800 text-white font-bold py-3 px-4 rounded-xl shadow-lg transition duration-200"
                 >
                     {web3Loading ? (
-                        <span>Verifying Cryptographic Signature...</span>
+                        <span>Authenticating Wallet...</span>
                     ) : (
                         <>
                             <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -116,7 +129,6 @@ export default function Login({ status, canResetPassword }) {
                         value={data.email}
                         className="mt-1 block w-full bg-slate-950 border-slate-800 focus:border-emerald-500 focus:ring-emerald-500 text-white rounded-lg text-sm h-10"
                         autoComplete="username"
-                        isFocused={true}
                         onChange={(e) => setData('email', e.target.value)}
                     />
                     <InputError message={errors.email} className="mt-1" />
