@@ -1,12 +1,12 @@
 import { http, createConfig } from 'wagmi';
-import { sepolia } from 'wagmi/chains';
+import { mainnet, sepolia } from 'wagmi/chains'; // Import both Mainnet and Sepolia
 import { walletConnect, injected } from 'wagmi/connectors';
 
 // Hardcoding your official Reown Project ID directly for maximum reliability
 const projectId = '7ecf37c947bf45f79872127e4876f649';
 
 export const config = createConfig({
-  chains: [sepolia], // Requesting only one chain prevents session parameter conflicts
+  chains: [mainnet, sepolia], // Mainnet is placed first for universal mobile compatibility
   connectors: [
     injected(),
     walletConnect({ 
@@ -22,6 +22,7 @@ export const config = createConfig({
     }),
   ],
   transports: {
+    [mainnet.id]: http(),
     [sepolia.id]: http(),
   },
 });
