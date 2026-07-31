@@ -26,6 +26,7 @@
         "@tanstack/react-query": "^5.101.4",
         "@wagmi/connectors": "^8.0.26",
         "@wagmi/core": "^3.6.4",
+        "@walletconnect/ethereum-provider": "^2.23.10",
         "viem": "^2.55.10",
         "wagmi": "^3.7.5"
     }

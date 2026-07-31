@@ -1,99 +1,749 @@
 {
-  "_AuthenticatedLayout-BUza6dXn.js": {
-    "file": "assets/AuthenticatedLayout-BUza6dXn.js",
+  "_AuthenticatedLayout-C9dQNq8w.js": {
+    "file": "assets/AuthenticatedLayout-C9dQNq8w.js",
     "name": "AuthenticatedLayout",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_GuestLayout-CpiFv4ac.js": {
-    "file": "assets/GuestLayout-CpiFv4ac.js",
+  "_GuestLayout-B4ASoxUz.js": {
+    "file": "assets/GuestLayout-B4ASoxUz.js",
     "name": "GuestLayout",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_Index-Czmqd7gl.js": {
-    "file": "assets/Index-Czmqd7gl.js",
-    "name": "Index",
-    "isDynamicEntry": true,
-    "imports": [
-      "resources/js/app.jsx",
-      "_AuthenticatedLayout-BUza6dXn.js",
-      "_useConfig-DXmr0THS.js"
-    ],
-    "dynamicImports": [
-      "node_modules/viem/_esm/utils/ccip.js",
-      "node_modules/@noble/curves/esm/secp256k1.js"
-    ]
-  },
-  "_InputLabel-Bh8TsUZr.js": {
-    "file": "assets/InputLabel-Bh8TsUZr.js",
+  "_InputLabel-CTMHuihm.js": {
+    "file": "assets/InputLabel-CTMHuihm.js",
     "name": "InputLabel",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_PrimaryButton-BUONKjMg.js": {
-    "file": "assets/PrimaryButton-BUONKjMg.js",
+  "_PrimaryButton-DDrlQhHw.js": {
+    "file": "assets/PrimaryButton-DDrlQhHw.js",
     "name": "PrimaryButton",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_TextInput-CDs53RgR.js": {
-    "file": "assets/TextInput-CDs53RgR.js",
+  "_TextInput-mgw0rql5.js": {
+    "file": "assets/TextInput-mgw0rql5.js",
     "name": "TextInput",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "__vite-optional-peer-dep:@walletconnect/ethereum-provider:@wagmi/connectors:false": {
-    "file": "assets/connectors_false-DfcE2qQJ.js",
-    "name": "connectors_false",
-    "src": "__vite-optional-peer-dep:@walletconnect/ethereum-provider:@wagmi/connectors:false",
-    "isDynamicEntry": true
+  "_ccip-C2OoiSXu.js": {
+    "file": "assets/ccip-C2OoiSXu.js",
+    "name": "ccip",
+    "isDynamicEntry": true,
+    "imports": [
+      "_sendRawTransaction-nfJvDJk5.js",
+      "resources/js/app.jsx",
+      "_node-Bu0tFcZY.js"
+    ]
   },
-  "_transition-BnBi6tb2.js": {
-    "file": "assets/transition-BnBi6tb2.js",
+  "_core-BIFvuw2G.js": {
+    "file": "assets/core-BIFvuw2G.js",
+    "name": "core",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_index-ChehHdwR.js",
+      "_sha256-Csv6eK51.js",
+      "_hmac-CDFl2maV.js",
+      "_node-Bu0tFcZY.js"
+    ],
+    "dynamicImports": [
+      "node_modules/viem/_esm/index.js",
+      "node_modules/@reown/appkit-controllers/dist/esm/exports/features.js",
+      "node_modules/@reown/appkit-scaffold-ui/dist/esm/exports/basic.js",
+      "node_modules/@reown/appkit-scaffold-ui/dist/esm/exports/w3m-modal.js"
+    ]
+  },
+  "_custom-8mJBK78N.js": {
+    "file": "assets/custom-8mJBK78N.js",
+    "name": "custom",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_hmac-CDFl2maV.js": {
+    "file": "assets/hmac-CDFl2maV.js",
+    "name": "hmac",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_index-ChehHdwR.js": {
+    "file": "assets/index-ChehHdwR.js",
+    "name": "index",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_sha256-Csv6eK51.js",
+      "_hmac-CDFl2maV.js"
+    ],
+    "dynamicImports": [
+      "_core-BIFvuw2G.js"
+    ]
+  },
+  "_index-Ci8Z_Z7E.js": {
+    "file": "assets/index-Ci8Z_Z7E.js",
+    "name": "index",
+    "imports": [
+      "_core-BIFvuw2G.js",
+      "resources/js/app.jsx"
+    ],
+    "dynamicImports": [
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowCircleDown.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowClockwise.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowDown.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowLeft.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowRight.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowSquareOut.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowsDownUp.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowsLeftRight.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowUp.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowUpRight.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowsClockwise.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhBank.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhBrowser.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCaretDown.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCaretLeft.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCaretRight.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCaretUp.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCheck.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCircleHalf.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhClock.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCompass.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCopy.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCreditCard.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCurrencyDollar.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhDesktop.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhDeviceMobile.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhDotsThree.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhVault.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhEnvelope.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhFunnelSimple.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhGlobe.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhIdentificationCard.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhImage.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhInfo.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhLightbulb.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhMagnifyingGlass.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhPaperPlaneRight.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhPlus.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhPower.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhPuzzlePiece.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhQrCode.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhQuestion.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhQuestionMark.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhSealCheck.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhSignOut.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhSpinner.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhTrash.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhUser.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhWallet.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhWarning.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhWarningCircle.mjs",
+      "node_modules/@phosphor-icons/webcomponents/dist/icons/PhX.mjs"
+    ]
+  },
+  "_node-Bu0tFcZY.js": {
+    "file": "assets/node-Bu0tFcZY.js",
+    "name": "node",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_property-CnFDNXw5.js": {
+    "file": "assets/property-CnFDNXw5.js",
+    "name": "property"
+  },
+  "_sendRawTransaction-nfJvDJk5.js": {
+    "file": "assets/sendRawTransaction-nfJvDJk5.js",
+    "name": "sendRawTransaction",
+    "imports": [
+      "resources/js/app.jsx",
+      "_node-Bu0tFcZY.js",
+      "_sha256-Csv6eK51.js"
+    ],
+    "dynamicImports": [
+      "_ccip-C2OoiSXu.js",
+      "node_modules/@noble/curves/esm/secp256k1.js"
+    ]
+  },
+  "_sha256-Csv6eK51.js": {
+    "file": "assets/sha256-Csv6eK51.js",
+    "name": "sha256",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_transition-rcCLRGaN.js": {
+    "file": "assets/transition-rcCLRGaN.js",
     "name": "transition",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_useConfig-DXmr0THS.js": {
-    "file": "assets/useConfig-DXmr0THS.js",
+  "_useConfig-yTjPxbbs.js": {
+    "file": "assets/useConfig-yTjPxbbs.js",
     "name": "useConfig",
     "imports": [
-      "resources/js/app.jsx"
+      "resources/js/app.jsx",
+      "_custom-8mJBK78N.js"
     ]
   },
   "node_modules/@noble/curves/esm/secp256k1.js": {
-    "file": "assets/secp256k1-y3k0uvhU.js",
+    "file": "assets/secp256k1-CvbC1lax.js",
     "name": "secp256k1",
     "src": "node_modules/@noble/curves/esm/secp256k1.js",
     "isDynamicEntry": true,
     "imports": [
-      "_Index-Czmqd7gl.js",
-      "resources/js/app.jsx",
-      "_AuthenticatedLayout-BUza6dXn.js",
-      "_useConfig-DXmr0THS.js"
+      "_sha256-Csv6eK51.js",
+      "_hmac-CDFl2maV.js",
+      "resources/js/app.jsx"
     ]
   },
-  "node_modules/viem/_esm/utils/ccip.js": {
-    "file": "assets/ccip-sjjfOx7n.js",
-    "name": "ccip",
-    "src": "node_modules/viem/_esm/utils/ccip.js",
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowCircleDown.mjs": {
+    "file": "assets/PhArrowCircleDown-BtlNV0TZ.js",
+    "name": "PhArrowCircleDown",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowCircleDown.mjs",
     "isDynamicEntry": true,
     "imports": [
-      "_Index-Czmqd7gl.js",
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowClockwise.mjs": {
+    "file": "assets/PhArrowClockwise-mOiWYLMV.js",
+    "name": "PhArrowClockwise",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowClockwise.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowDown.mjs": {
+    "file": "assets/PhArrowDown-CkoOD89h.js",
+    "name": "PhArrowDown",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowDown.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowLeft.mjs": {
+    "file": "assets/PhArrowLeft-C0jlxVhM.js",
+    "name": "PhArrowLeft",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowLeft.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowRight.mjs": {
+    "file": "assets/PhArrowRight-BI-V03Xf.js",
+    "name": "PhArrowRight",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowRight.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowSquareOut.mjs": {
+    "file": "assets/PhArrowSquareOut-DnQ7n_B4.js",
+    "name": "PhArrowSquareOut",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowSquareOut.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowUp.mjs": {
+    "file": "assets/PhArrowUp-izKvURUW.js",
+    "name": "PhArrowUp",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowUp.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowUpRight.mjs": {
+    "file": "assets/PhArrowUpRight-Bn-JhHsY.js",
+    "name": "PhArrowUpRight",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowUpRight.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowsClockwise.mjs": {
+    "file": "assets/PhArrowsClockwise-Brtx2Re-.js",
+    "name": "PhArrowsClockwise",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowsClockwise.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowsDownUp.mjs": {
+    "file": "assets/PhArrowsDownUp-PZosTqZG.js",
+    "name": "PhArrowsDownUp",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowsDownUp.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowsLeftRight.mjs": {
+    "file": "assets/PhArrowsLeftRight-CYsRQ2qh.js",
+    "name": "PhArrowsLeftRight",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhArrowsLeftRight.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhBank.mjs": {
+    "file": "assets/PhBank-hhPAIPVb.js",
+    "name": "PhBank",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhBank.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhBrowser.mjs": {
+    "file": "assets/PhBrowser-BjzAmrHO.js",
+    "name": "PhBrowser",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhBrowser.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCaretDown.mjs": {
+    "file": "assets/PhCaretDown-ddSjwcwm.js",
+    "name": "PhCaretDown",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCaretDown.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCaretLeft.mjs": {
+    "file": "assets/PhCaretLeft-B7YLoNEF.js",
+    "name": "PhCaretLeft",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCaretLeft.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCaretRight.mjs": {
+    "file": "assets/PhCaretRight-BY8D5MIg.js",
+    "name": "PhCaretRight",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCaretRight.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCaretUp.mjs": {
+    "file": "assets/PhCaretUp-BG10nSut.js",
+    "name": "PhCaretUp",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCaretUp.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCheck.mjs": {
+    "file": "assets/PhCheck-DrKd7pBC.js",
+    "name": "PhCheck",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCheck.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCircleHalf.mjs": {
+    "file": "assets/PhCircleHalf-Bk9C4DvT.js",
+    "name": "PhCircleHalf",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCircleHalf.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhClock.mjs": {
+    "file": "assets/PhClock-Sj17weCB.js",
+    "name": "PhClock",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhClock.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCompass.mjs": {
+    "file": "assets/PhCompass-Df1ugFO-.js",
+    "name": "PhCompass",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCompass.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCopy.mjs": {
+    "file": "assets/PhCopy-rgttky8E.js",
+    "name": "PhCopy",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCopy.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCreditCard.mjs": {
+    "file": "assets/PhCreditCard-CZpdid2n.js",
+    "name": "PhCreditCard",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCreditCard.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCurrencyDollar.mjs": {
+    "file": "assets/PhCurrencyDollar-B6IKKjue.js",
+    "name": "PhCurrencyDollar",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhCurrencyDollar.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhDesktop.mjs": {
+    "file": "assets/PhDesktop-BuCDXYJj.js",
+    "name": "PhDesktop",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhDesktop.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhDeviceMobile.mjs": {
+    "file": "assets/PhDeviceMobile-CnybhXY-.js",
+    "name": "PhDeviceMobile",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhDeviceMobile.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhDotsThree.mjs": {
+    "file": "assets/PhDotsThree-CSAEcba1.js",
+    "name": "PhDotsThree",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhDotsThree.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhEnvelope.mjs": {
+    "file": "assets/PhEnvelope-SmaNeXoQ.js",
+    "name": "PhEnvelope",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhEnvelope.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhFunnelSimple.mjs": {
+    "file": "assets/PhFunnelSimple-DKx35ITq.js",
+    "name": "PhFunnelSimple",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhFunnelSimple.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhGlobe.mjs": {
+    "file": "assets/PhGlobe-q1mqj65V.js",
+    "name": "PhGlobe",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhGlobe.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhIdentificationCard.mjs": {
+    "file": "assets/PhIdentificationCard-BeLXJpfZ.js",
+    "name": "PhIdentificationCard",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhIdentificationCard.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhImage.mjs": {
+    "file": "assets/PhImage-BYrKfN9k.js",
+    "name": "PhImage",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhImage.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhInfo.mjs": {
+    "file": "assets/PhInfo-X33f06Ej.js",
+    "name": "PhInfo",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhInfo.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhLightbulb.mjs": {
+    "file": "assets/PhLightbulb-DMZJsowR.js",
+    "name": "PhLightbulb",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhLightbulb.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhMagnifyingGlass.mjs": {
+    "file": "assets/PhMagnifyingGlass-B6D0sWFL.js",
+    "name": "PhMagnifyingGlass",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhMagnifyingGlass.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhPaperPlaneRight.mjs": {
+    "file": "assets/PhPaperPlaneRight-Dvo-nXr9.js",
+    "name": "PhPaperPlaneRight",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhPaperPlaneRight.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhPlus.mjs": {
+    "file": "assets/PhPlus-CBvZvLax.js",
+    "name": "PhPlus",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhPlus.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhPower.mjs": {
+    "file": "assets/PhPower-D8-AcNM6.js",
+    "name": "PhPower",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhPower.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhPuzzlePiece.mjs": {
+    "file": "assets/PhPuzzlePiece-C-7mYqGO.js",
+    "name": "PhPuzzlePiece",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhPuzzlePiece.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhQrCode.mjs": {
+    "file": "assets/PhQrCode-uIXlI5ER.js",
+    "name": "PhQrCode",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhQrCode.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhQuestion.mjs": {
+    "file": "assets/PhQuestion-rUoqC2sC.js",
+    "name": "PhQuestion",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhQuestion.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhQuestionMark.mjs": {
+    "file": "assets/PhQuestionMark-W55Txvvb.js",
+    "name": "PhQuestionMark",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhQuestionMark.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhSealCheck.mjs": {
+    "file": "assets/PhSealCheck-BeVLq9PH.js",
+    "name": "PhSealCheck",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhSealCheck.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhSignOut.mjs": {
+    "file": "assets/PhSignOut-Cq2PivQ6.js",
+    "name": "PhSignOut",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhSignOut.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhSpinner.mjs": {
+    "file": "assets/PhSpinner-CZMtAFdX.js",
+    "name": "PhSpinner",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhSpinner.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhTrash.mjs": {
+    "file": "assets/PhTrash-BamrmMsN.js",
+    "name": "PhTrash",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhTrash.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhUser.mjs": {
+    "file": "assets/PhUser-A2fxqIV0.js",
+    "name": "PhUser",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhUser.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhVault.mjs": {
+    "file": "assets/PhVault-B8m1usHw.js",
+    "name": "PhVault",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhVault.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhWallet.mjs": {
+    "file": "assets/PhWallet-WVAuHGpA.js",
+    "name": "PhWallet",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhWallet.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhWarning.mjs": {
+    "file": "assets/PhWarning-CpkID9oi.js",
+    "name": "PhWarning",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhWarning.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhWarningCircle.mjs": {
+    "file": "assets/PhWarningCircle-Cm58gXb9.js",
+    "name": "PhWarningCircle",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhWarningCircle.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@phosphor-icons/webcomponents/dist/icons/PhX.mjs": {
+    "file": "assets/PhX-C3b4cCEy.js",
+    "name": "PhX",
+    "src": "node_modules/@phosphor-icons/webcomponents/dist/icons/PhX.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_property-CnFDNXw5.js"
+    ]
+  },
+  "node_modules/@reown/appkit-controllers/dist/esm/exports/features.js": {
+    "file": "assets/features-QwSb5CIt.js",
+    "name": "features",
+    "src": "node_modules/@reown/appkit-controllers/dist/esm/exports/features.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_core-BIFvuw2G.js",
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-BUza6dXn.js",
-      "_useConfig-DXmr0THS.js"
+      "_index-ChehHdwR.js",
+      "_sha256-Csv6eK51.js",
+      "_hmac-CDFl2maV.js",
+      "_node-Bu0tFcZY.js"
+    ]
+  },
+  "node_modules/@reown/appkit-scaffold-ui/dist/esm/exports/basic.js": {
+    "file": "assets/basic-D8gXWKBy.js",
+    "name": "basic",
+    "src": "node_modules/@reown/appkit-scaffold-ui/dist/esm/exports/basic.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_core-BIFvuw2G.js",
+      "_index-Ci8Z_Z7E.js",
+      "resources/js/app.jsx",
+      "_index-ChehHdwR.js",
+      "_sha256-Csv6eK51.js",
+      "_hmac-CDFl2maV.js",
+      "_node-Bu0tFcZY.js"
+    ]
+  },
+  "node_modules/@reown/appkit-scaffold-ui/dist/esm/exports/w3m-modal.js": {
+    "file": "assets/w3m-modal-Ddb6FfOR.js",
+    "name": "w3m-modal",
+    "src": "node_modules/@reown/appkit-scaffold-ui/dist/esm/exports/w3m-modal.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_core-BIFvuw2G.js",
+      "_index-Ci8Z_Z7E.js",
+      "resources/js/app.jsx",
+      "_index-ChehHdwR.js",
+      "_sha256-Csv6eK51.js",
+      "_hmac-CDFl2maV.js",
+      "_node-Bu0tFcZY.js"
+    ]
+  },
+  "node_modules/brotli-wasm/pkg.web/brotli_wasm_bg.wasm": {
+    "file": "assets/brotli_wasm_bg-NfWIZley.wasm",
+    "src": "node_modules/brotli-wasm/pkg.web/brotli_wasm_bg.wasm"
+  },
+  "node_modules/viem/_esm/index.js": {
+    "file": "assets/index-C9zard1h.js",
+    "name": "index",
+    "src": "node_modules/viem/_esm/index.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_node-Bu0tFcZY.js",
+      "_sendRawTransaction-nfJvDJk5.js",
+      "_ccip-C2OoiSXu.js",
+      "node_modules/@noble/curves/esm/secp256k1.js",
+      "_core-BIFvuw2G.js",
+      "_custom-8mJBK78N.js",
+      "_sha256-Csv6eK51.js",
+      "_hmac-CDFl2maV.js",
+      "_index-ChehHdwR.js"
     ]
   },
   "resources/js/Pages/Admin/Dashboard.jsx": {
-    "file": "assets/Dashboard-CYb4PL38.js",
+    "file": "assets/Dashboard-CDhddvaN.js",
     "name": "Dashboard",
     "src": "resources/js/Pages/Admin/Dashboard.jsx",
     "isDynamicEntry": true,
@@ -102,90 +752,91 @@
     ]
   },
   "resources/js/Pages/Ai/Index.jsx": {
-    "file": "assets/Index-CpI1384s.js",
+    "file": "assets/Index-W0Fqldep.js",
     "name": "Index",
     "src": "resources/js/Pages/Ai/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-BUza6dXn.js"
+      "_AuthenticatedLayout-C9dQNq8w.js"
     ]
   },
   "resources/js/Pages/Auth/ConfirmPassword.jsx": {
-    "file": "assets/ConfirmPassword-Dnj7De0c.js",
+    "file": "assets/ConfirmPassword-BNBpjGz0.js",
     "name": "ConfirmPassword",
     "src": "resources/js/Pages/Auth/ConfirmPassword.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-CDs53RgR.js",
-      "_InputLabel-Bh8TsUZr.js",
-      "_PrimaryButton-BUONKjMg.js",
-      "_GuestLayout-CpiFv4ac.js"
+      "_TextInput-mgw0rql5.js",
+      "_InputLabel-CTMHuihm.js",
+      "_PrimaryButton-DDrlQhHw.js",
+      "_GuestLayout-B4ASoxUz.js"
     ]
   },
   "resources/js/Pages/Auth/ForgotPassword.jsx": {
-    "file": "assets/ForgotPassword-DaIGXRJb.js",
+    "file": "assets/ForgotPassword-DhZNtVpi.js",
     "name": "ForgotPassword",
     "src": "resources/js/Pages/Auth/ForgotPassword.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-CDs53RgR.js",
-      "_GuestLayout-CpiFv4ac.js"
+      "_TextInput-mgw0rql5.js",
+      "_GuestLayout-B4ASoxUz.js"
     ]
   },
   "resources/js/Pages/Auth/Login.jsx": {
-    "file": "assets/Login-BzFNy8yG.js",
+    "file": "assets/Login-DOVVLkl_.js",
     "name": "Login",
     "src": "resources/js/Pages/Auth/Login.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-CDs53RgR.js",
-      "_InputLabel-Bh8TsUZr.js",
-      "_GuestLayout-CpiFv4ac.js",
-      "_useConfig-DXmr0THS.js"
+      "_TextInput-mgw0rql5.js",
+      "_InputLabel-CTMHuihm.js",
+      "_GuestLayout-B4ASoxUz.js",
+      "_useConfig-yTjPxbbs.js",
+      "_custom-8mJBK78N.js"
     ]
   },
   "resources/js/Pages/Auth/Register.jsx": {
-    "file": "assets/Register-DIJn9W91.js",
+    "file": "assets/Register-DoDDdXbo.js",
     "name": "Register",
     "src": "resources/js/Pages/Auth/Register.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-CDs53RgR.js",
-      "_InputLabel-Bh8TsUZr.js",
-      "_GuestLayout-CpiFv4ac.js"
+      "_TextInput-mgw0rql5.js",
+      "_InputLabel-CTMHuihm.js",
+      "_GuestLayout-B4ASoxUz.js"
     ]
   },
   "resources/js/Pages/Auth/ResetPassword.jsx": {
-    "file": "assets/ResetPassword-Do6KsEAl.js",
+    "file": "assets/ResetPassword-CCfejHvl.js",
     "name": "ResetPassword",
     "src": "resources/js/Pages/Auth/ResetPassword.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-CDs53RgR.js",
-      "_InputLabel-Bh8TsUZr.js",
-      "_PrimaryButton-BUONKjMg.js",
-      "_GuestLayout-CpiFv4ac.js"
+      "_TextInput-mgw0rql5.js",
+      "_InputLabel-CTMHuihm.js",
+      "_PrimaryButton-DDrlQhHw.js",
+      "_GuestLayout-B4ASoxUz.js"
     ]
   },
   "resources/js/Pages/Auth/VerifyEmail.jsx": {
-    "file": "assets/VerifyEmail-BacOg4bY.js",
+    "file": "assets/VerifyEmail-Dzn1NtzW.js",
     "name": "VerifyEmail",
     "src": "resources/js/Pages/Auth/VerifyEmail.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_PrimaryButton-BUONKjMg.js",
-      "_GuestLayout-CpiFv4ac.js"
+      "_PrimaryButton-DDrlQhHw.js",
+      "_GuestLayout-B4ASoxUz.js"
     ]
   },
   "resources/js/Pages/CmsShow.jsx": {
-    "file": "assets/CmsShow-CMsUOzhf.js",
+    "file": "assets/CmsShow-BsNOaSHf.js",
     "name": "CmsShow",
     "src": "resources/js/Pages/CmsShow.jsx",
     "isDynamicEntry": true,
@@ -194,142 +845,157 @@
     ]
   },
   "resources/js/Pages/Dashboard.jsx": {
-    "file": "assets/Dashboard-kaFzJaG3.js",
+    "file": "assets/Dashboard-wCbAB4gY.js",
     "name": "Dashboard",
     "src": "resources/js/Pages/Dashboard.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-BUza6dXn.js"
+      "_AuthenticatedLayout-C9dQNq8w.js"
     ]
   },
   "resources/js/Pages/Deposits/Index.jsx": {
-    "file": "assets/Index-t5V2tYSK.js",
+    "file": "assets/Index-Bd5lR-Yo.js",
     "name": "Index",
     "src": "resources/js/Pages/Deposits/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-BUza6dXn.js"
+      "_AuthenticatedLayout-C9dQNq8w.js"
     ]
   },
   "resources/js/Pages/Kyc/Index.jsx": {
-    "file": "assets/Index-ClcGD7Yi.js",
+    "file": "assets/Index-BBBSFEF2.js",
     "name": "Index",
     "src": "resources/js/Pages/Kyc/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-BUza6dXn.js"
+      "_AuthenticatedLayout-C9dQNq8w.js"
     ]
   },
   "resources/js/Pages/P2p/Index.jsx": {
-    "file": "assets/Index-BsMercre.js",
+    "file": "assets/Index-DtIfCL6i.js",
     "name": "Index",
     "src": "resources/js/Pages/P2p/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-BUza6dXn.js"
+      "_AuthenticatedLayout-C9dQNq8w.js"
     ]
   },
   "resources/js/Pages/P2p/TradeRoom.jsx": {
-    "file": "assets/TradeRoom-B4vydVgv.js",
+    "file": "assets/TradeRoom-DmbxG8hu.js",
     "name": "TradeRoom",
     "src": "resources/js/Pages/P2p/TradeRoom.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-BUza6dXn.js"
+      "_AuthenticatedLayout-C9dQNq8w.js"
     ]
   },
   "resources/js/Pages/Profile/Edit.jsx": {
-    "file": "assets/Edit-BueA951e.js",
+    "file": "assets/Edit-DL-MfBr8.js",
     "name": "Edit",
     "src": "resources/js/Pages/Profile/Edit.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-BUza6dXn.js",
+      "_AuthenticatedLayout-C9dQNq8w.js",
       "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
       "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
       "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
-      "_TextInput-CDs53RgR.js",
-      "_InputLabel-Bh8TsUZr.js",
-      "_transition-BnBi6tb2.js",
-      "_PrimaryButton-BUONKjMg.js"
+      "_TextInput-mgw0rql5.js",
+      "_InputLabel-CTMHuihm.js",
+      "_transition-rcCLRGaN.js",
+      "_PrimaryButton-DDrlQhHw.js"
     ]
   },
   "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx": {
-    "file": "assets/DeleteUserForm-caYePa_S.js",
+    "file": "assets/DeleteUserForm-DxSuaF2N.js",
     "name": "DeleteUserForm",
     "src": "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-CDs53RgR.js",
-      "_InputLabel-Bh8TsUZr.js",
-      "_transition-BnBi6tb2.js"
+      "_TextInput-mgw0rql5.js",
+      "_InputLabel-CTMHuihm.js",
+      "_transition-rcCLRGaN.js"
     ]
   },
   "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx": {
-    "file": "assets/UpdatePasswordForm-B7TCg9N6.js",
+    "file": "assets/UpdatePasswordForm-BCzM8HuA.js",
     "name": "UpdatePasswordForm",
     "src": "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-CDs53RgR.js",
-      "_InputLabel-Bh8TsUZr.js",
-      "_PrimaryButton-BUONKjMg.js",
-      "_transition-BnBi6tb2.js"
+      "_TextInput-mgw0rql5.js",
+      "_InputLabel-CTMHuihm.js",
+      "_PrimaryButton-DDrlQhHw.js",
+      "_transition-rcCLRGaN.js"
     ]
   },
   "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx": {
-    "file": "assets/UpdateProfileInformationForm-Cq8Y70nt.js",
+    "file": "assets/UpdateProfileInformationForm-CIEnA0ud.js",
     "name": "UpdateProfileInformationForm",
     "src": "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-CDs53RgR.js",
-      "_InputLabel-Bh8TsUZr.js",
-      "_PrimaryButton-BUONKjMg.js",
-      "_transition-BnBi6tb2.js"
+      "_TextInput-mgw0rql5.js",
+      "_InputLabel-CTMHuihm.js",
+      "_PrimaryButton-DDrlQhHw.js",
+      "_transition-rcCLRGaN.js"
     ]
   },
   "resources/js/Pages/Referrals/Index.jsx": {
-    "file": "assets/Index-CJXrB1zV.js",
+    "file": "assets/Index-DF2ln04_.js",
     "name": "Index",
     "src": "resources/js/Pages/Referrals/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-BUza6dXn.js"
+      "_AuthenticatedLayout-C9dQNq8w.js"
+    ]
+  },
+  "resources/js/Pages/Staking/Index.jsx": {
+    "file": "assets/Index-u2vzD0iK.js",
+    "name": "Index",
+    "src": "resources/js/Pages/Staking/Index.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_AuthenticatedLayout-C9dQNq8w.js",
+      "_useConfig-yTjPxbbs.js",
+      "_custom-8mJBK78N.js",
+      "_sendRawTransaction-nfJvDJk5.js",
+      "_node-Bu0tFcZY.js",
+      "_sha256-Csv6eK51.js"
     ]
   },
   "resources/js/Pages/Support/Index.jsx": {
-    "file": "assets/Index-BRyCkQsZ.js",
+    "file": "assets/Index-DicJJTHx.js",
     "name": "Index",
     "src": "resources/js/Pages/Support/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-BUza6dXn.js"
+      "_AuthenticatedLayout-C9dQNq8w.js"
     ]
   },
   "resources/js/Pages/Support/Show.jsx": {
-    "file": "assets/Show-DbK_K9kY.js",
+    "file": "assets/Show-D6cOXaoG.js",
     "name": "Show",
     "src": "resources/js/Pages/Support/Show.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-BUza6dXn.js"
+      "_AuthenticatedLayout-C9dQNq8w.js"
     ]
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome-Creiul_e.js",
+    "file": "assets/Welcome-Dj6FKO6i.js",
     "name": "Welcome",
     "src": "resources/js/Pages/Welcome.jsx",
     "isDynamicEntry": true,
@@ -338,22 +1004,22 @@
     ]
   },
   "resources/js/Pages/Withdrawals/Index.jsx": {
-    "file": "assets/Index-DJ7mfX27.js",
+    "file": "assets/Index-DdbAVaIv.js",
     "name": "Index",
     "src": "resources/js/Pages/Withdrawals/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-BUza6dXn.js"
+      "_AuthenticatedLayout-C9dQNq8w.js"
     ]
   },
   "resources/js/app.jsx": {
-    "file": "assets/app-Bslp5qP0.js",
+    "file": "assets/app-B7NKKLX2.js",
     "name": "app",
     "src": "resources/js/app.jsx",
     "isEntry": true,
     "dynamicImports": [
-      "__vite-optional-peer-dep:@walletconnect/ethereum-provider:@wagmi/connectors:false",
+      "_index-ChehHdwR.js",
       "resources/js/Pages/Admin/Dashboard.jsx",
       "resources/js/Pages/Ai/Index.jsx",
       "resources/js/Pages/Auth/ConfirmPassword.jsx",
@@ -373,7 +1039,7 @@
       "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
       "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
       "resources/js/Pages/Referrals/Index.jsx",
-      "_Index-Czmqd7gl.js",
+      "resources/js/Pages/Staking/Index.jsx",
       "resources/js/Pages/Support/Index.jsx",
       "resources/js/Pages/Support/Show.jsx",
       "resources/js/Pages/Welcome.jsx",
